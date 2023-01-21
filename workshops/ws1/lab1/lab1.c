@@ -23,7 +23,7 @@ int main(void)
 
 void title(void)
 {
-	printf("IPC144 NBB\tWorkshhop1\tPart1\n");	
+	printf("IPC144 NBB\tWorkshop 1\tPart 1\n");	
 }
 
 void line(void)

@@ -14,7 +14,7 @@ void line(void);
 void info(void);
 int avg(void);
 
- main(void)
+int main(void)
 {
 	title();
 	line();

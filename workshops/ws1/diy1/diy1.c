@@ -38,6 +38,7 @@ int avg(void)
 	avg = (a + b + c) / 3;
 	printf("The average is: %d\n", +avg);
 	line();
+	return 0;
 }
 
 void title(void)

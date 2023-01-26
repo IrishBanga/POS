@@ -14,14 +14,14 @@ void line(void);
 void info(void);
 int avg(void);
 
-int main(void)
+ main(void)
 {
 	title();
 	line();
 	info();
 	line();
 	avg();
-	line();
+	
 	return 0;
 }
 
@@ -37,6 +37,7 @@ int avg(void)
 	scanf("%d",&c);
 	avg = (a + b + c) / 3;
 	printf("The average is: %d\n", +avg);
+	line();
 }
 
 void title(void)

@@ -1,0 +1,25 @@
+Name: Irish Banga
+Email: ibanga1@myseneca.ca
+Student ID: 112435227
+Completion Date: 2023-01-25
+
+REFLECTION
+
+Function prototype: lets the user introduce the function before the beginning of the main program and define it after the end of the main program.
+
+%d- lets the program accept value from the user and stores it as an integer.
+
+(i++) – unary operand which increments the value of the variable by 1 after each iteration.
+
+Escape sequences \n and \t – which take the cursor to a new line and insert a horizontal tab respectively.
+
+putchar()- used to display a single character.
+
+printf() – used to display output.
+  
+scanf() – used to collect data from the user during the execution of the program in a format that is specified within the statement itself and stored in a suitable variable.
+
+Through knowledge gained from the succeeding lecture, I was able to modify the line() function to print dashes ‘-’ using a loop and putchar() instead of typing them 60 times in a printf() statement – better allocation of resources and less chance of error in the output.
+I faced a problem using the scanf() function. An error caused the program to receive more values than the intended number of inputs.
+However, I was able to resolve the issues by reading 'MORE INPUT AND OUTPUT'(https://intro2c.sdds.ca/F-Refinements/more-input-and-output) topic.
+

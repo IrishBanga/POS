@@ -30,7 +30,7 @@ void shoppingStats(int noOfItems)
 	double avg=0.0;
 	while (i <= noOfItems)
 	{
-		printf("%d>",i);
+		printf("%d> ",i);
 		scanf("%lf",&price);
 		tp = tp + price;
 		i++;

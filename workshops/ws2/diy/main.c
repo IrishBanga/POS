@@ -10,5 +10,17 @@ I have done all the coding by myself and only copied the code that my professor 
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 
-// this is empty file created due to submission error 
-// the instructions specified creating the rectangle function in draw.c file
+
+void rectangle(char leftTop, char top, char topRight,
+    char right, char rightButtom, char buttom,
+    char buttomLeft, char left, char fill,
+    int width, int height);
+
+
+
+int main(void)
+{
+    rectangle('+', '-', '+', '|', '+', '-', '+', '|', ' ', 20, 8);
+    rectangle('/', '-', '\\', '|', '/', '-', '\\', '|', 'X', 50, 14);
+    return 0;
+}

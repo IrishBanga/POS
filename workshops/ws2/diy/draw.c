@@ -11,18 +11,7 @@ I have done all the coding by myself and only copied the code that my professor 
 #include <stdio.h>
 
 
-void rectangle(char leftTop, char top, char topRight,
-    char right, char rightButtom, char buttom,
-    char buttomLeft, char left, char fill,
-    int width, int height);
 void line(char start, char middle, char last, int length);
-
-int main(void)
-{
-    rectangle('+', '-', '+', '|', '+', '-', '+', '|', ' ', 20, 8);
-    rectangle('/', '-', '\\', '|', '/', '-', '\\', '|', 'X', 50, 14);
-    return 0;
-}
 
 void rectangle(char leftTop, char top, char topRight,
     char right, char rightButtom, char buttom,

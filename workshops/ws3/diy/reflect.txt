@@ -1,0 +1,28 @@
+Name: Irish Banga
+Email: ibanga1@myseneca.ca
+Student ID: 112435227
+Completion Date: 2023-02-08
+
+REFLECTION
+
+LAB
+Previously, we defined the return type exclusively for the main() function. 
+But, this workshop’s lab made use of returning functions where we defined the return type of other functions as well.
+Using it, I was able to perform operations on the data entered and return the output directly to the operating system and later assign it to different variables in the main program as per the workshop instructions.
+
+Displaying the output correctly took most of my time as the prnGrade() function could not simply be placed in a printf() statement.
+I printed a matching output but I believe it could have been done in a better way.
+
+DIY
+This part of the workshop implemented the flushKey() function which was introduced in the lecture prior to it. 
+It helped to reject the unwanted/incorrect data that the user may input when the program is run.
+(All the keystrokes by the user are registered by the system and stored in buffer storage. While the correct values are passed onto the variables in the function, others remain in the buffer. This may result in an error during program execution.) 
+
+The getInt() function was provided in the instructions.
+Debugging it was the most challenging part of the workshop for me.
+I used the scanf() function to receive a value but I had problems rejecting bad input.
+In certain instances, the program ended up in an endless input-receiving loop. After multiple attempts, I was able to create a working function with the required checks in place.  
+
+This function was reused as getDouble() function with minor modifications.
+Further, instead of writing the whole code again both these functions were called into similar functions with defined range limitations.
+

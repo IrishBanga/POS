@@ -54,7 +54,7 @@ int getIntMM(int min, int max)
         }
         else
         {
-            printf("[10<=Number<=20], try again: ");
+            printf("[%d<=Number<=%d], try again: ",min,max);
             value = getInt();
         }
     }
@@ -102,7 +102,7 @@ double getDoubleMM(double min, double max)
         }
         else
         {
-            printf("[10.100<=Number<=20.100], try again: ");
+            printf("[%.3lf<=Number<=%.3lf], try again: ",min,max);
             dvalue = getDouble();
         }
     }

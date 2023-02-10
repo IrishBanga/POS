@@ -10,6 +10,7 @@ I have done all the coding by myself and only copied the code that my professor 
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
 #include "rental.h"
+#include "utils.h"
 
 void menu(void)
 {

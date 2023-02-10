@@ -55,7 +55,7 @@ double rent(int sku)
         printf("Winter Jacket .... %5.2lf$\n", price);
         break;
     default:
-        printf("Invalid Selection!\n");
+        printf("Invalid Selection! \n");
         
     }
     return price;

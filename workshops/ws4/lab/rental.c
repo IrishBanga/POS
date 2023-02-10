@@ -84,7 +84,7 @@ void rental(void)
 
         line('-', 28);
         printf("%-19s%5.2lf\n","Total price:",total);
-        printf("%-19s%5.2lf\n","Tax",total*0.13);
+        printf("%-19s%5.2lf\n","Tax:",total*0.13);
         printf("%-19s%5.2lf$\n","Total + Tax:",total*1.13);
         line('*', 28);
 }

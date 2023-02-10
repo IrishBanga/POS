@@ -16,7 +16,6 @@ int main(void)
 {
     printf("Welcome to Seneca Ski Equipment Rentals...\n"
         "------------------------------------------\n");
-    menu();
     do 
     {
         rental();

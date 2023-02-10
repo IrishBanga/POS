@@ -63,6 +63,7 @@ double rent(int sku)
 
 void rental(void)
 {
+    menu();
     int sku;
     int done = 0;
     double total = 0.0;

@@ -3,14 +3,13 @@ Name: Irish Banga
 Email: ibanga1@myseneca.ca
 Student ID: 112435227
 Competion Date: 2023-02-10
+
 I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 */
 
-#include "utils.h"
 #include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-char getSingleChar(void);
-int yes(void);
+#include "rental.h"
 
 void menu(void)
 {
@@ -24,8 +23,6 @@ void menu(void)
     printf("%-14s%-11s%s\n", "Winter Jacket", "20.55", "306");
     line('-', 28);
 }
-
-
 
 double rent(int sku)
 {
@@ -63,7 +60,6 @@ double rent(int sku)
     return price;
 }
 
-
 void rental(void)
 {
     int sku;
@@ -74,52 +70,19 @@ void rental(void)
         printf("Enter Sku or 0 to exit: ");
         sku = getInt();
         if (sku != 0)
+        {
             total = total + rent(sku);
+        }
         else
+        {
             done = 1;
+        }
     } 
     while (!done);
+
         line('-', 28);
         printf("%-19s%5.2lf\n","Total price:",total);
         printf("%-19s%5.2lf\n","Tax",total*0.13);
         printf("%-19s%5.2lf$\n","Total + Tax:",total*1.13);
         line('*', 28);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int yes(void) 
-{
-    int res;
-    char resp;
-    printf("(Y)es or (N)o: ");
-    resp = getSingleChar();
-    if (resp == 'Y' || resp == 'y') {
-        res = 1;
-    }
-    else {
-        res = 0;
-    }
-    return res;
-}
-char getSingleChar(void) 
-{
-    char ch = getchar();
-    flushKey();
-    return ch;
 }

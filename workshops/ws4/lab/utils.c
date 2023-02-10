@@ -3,14 +3,14 @@ Name: Irish Banga
 Email: ibanga1@myseneca.ca
 Student ID: 112435227
 Competion Date: 2023-02-08
+Last Modified : 2023-02-10
 
 I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
-void flushKey();
+#include "utils.h"
 
 int getInt()
 {
@@ -127,4 +127,26 @@ void flushKey()
     {
         ch = getchar();
     }
+}
+
+int yes(void)
+{
+    int res;
+    char resp;
+    printf("(Y)es or (N)o: ");
+    resp = getSingleChar();
+    if (resp == 'Y' || resp == 'y') {
+        res = 1;
+    }
+    else {
+        res = 0;
+    }
+    return res;
+}
+
+char getSingleChar(void)
+{
+    char ch = getchar();
+    flushKey();
+    return ch;
 }

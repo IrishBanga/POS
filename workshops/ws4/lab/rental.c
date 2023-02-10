@@ -48,7 +48,7 @@ double rent(int sku)
         break;
     case 305:
         price = 14.30;
-        printf("Winter Pants ..... %5.2lf$\n", price);
+        printf("Winter Pants .... %5.2lf$\n", price);
         break;
     case 306:
         price = 20.55;

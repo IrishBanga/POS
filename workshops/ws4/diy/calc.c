@@ -44,7 +44,7 @@ int calc(void)
             case '%':
                 arg1 = (long)num1;
                 arg2 = (long)num2;
-                line('-', printf("%d\n", arg1 % arg2) - 1);
+                line('-', printf("%ld\n", arg1 % arg2) - 1);
                 break;
             case '^':
                 for (i = 1; i <= num2; i++)

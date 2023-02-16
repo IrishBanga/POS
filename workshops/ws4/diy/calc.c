@@ -18,6 +18,9 @@ int calc(void)
     char func;
     char arg;
     char check;
+    long int arg1, arg2;
+    int i;
+    double exp=1;
     printf("> ");
     scanf("%c", &arg);
     if (arg == '?')
@@ -39,18 +42,16 @@ int calc(void)
                 line('-', printf("%.3lf\n", num1 * num2) - 1);
                 break;
             case '%':
-                long  arg1 = (long)num1;
-                long  arg2 = (long)num2;
+                arg1 = (long)num1;
+                arg2 = (long)num2;
                 line('-', printf("%d\n", arg1 % arg2) - 1);
                 break;
             case '^':
-                int i;
-                double exp = 1.0;
                 for (i = 1; i <= num2; i++)
                 {
                     exp = exp * num1;
                 }
-                line('-', printf("%.3lf\n", exp) - 1);
+                line('-', printf("%.3lf\n",exp) - 1);
                 break;
             default:
                 printf("\'%c\' is not a valid operation, (only +,-,/,x,%% and ^ are acceptable)\n", func);

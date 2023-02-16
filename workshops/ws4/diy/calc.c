@@ -64,7 +64,7 @@ int calc(void)
     }
     else
     {
-        printf("Invalid Command!\n[Question mark][First Number][Operation][Second Number] < ENTER>\n");
+        printf("Invalid Command!\n[Question mark][First Number][Operation][Second Number]<ENTER>\n");
         flushKey();
     }  
     return 1;

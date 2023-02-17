@@ -9,11 +9,30 @@ I have done all the coding by myself and only copied the code that my professor 
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-
 #include "classList.h"
-int main() {
-	int stno[4] = { 12345, 23456, 345678, 45678 };
-	int mark[4] = { 55,66,44,88 };
-	printReport("IPC144NBB", stno, mark, 4);
+#include "utils.h"
+
+int main() 
+{
+	int num;
+	int i;
+	char subjectName[9+1];
+	printf("Enter subject Name: ");
+	scanf("%s",subjectName);
+	flushKey();
+    printf("Enter the number of students (max 50): ");
+	scanf("%d", &num);
+	printf("Enter %d student numbers and student marks...\n",num);
+	int stno[50];
+	int mark[50];
+	for (i = 0; i < num; i++)
+	{
+		printf("%d:\n",i+1);
+		printf("Student Number:");
+		scanf("%d", &stno[i]);
+		printf("Mark:");
+		scanf("%d", &mark[i]);
+	}
+	printReport(subjectName, stno, mark, num);
 	return 0;
 }

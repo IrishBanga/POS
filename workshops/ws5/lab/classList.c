@@ -18,7 +18,7 @@ void printReport(const char subjectCode[], const int studentNumbers[],
     int i, avg, lm, hm;
     lm = hm = 0;
     avg = 0;
-    printf("SUBJECT MARKS REPORT!\n");
+    printf("\nSUBJECT MARKS REPORT!\n");
     printf("  +---------------+\n");
     printf("  | %-14s|\n",subjectCode);
     printf("  +--------+------+\n");

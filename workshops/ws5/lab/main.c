@@ -10,7 +10,6 @@ I have done all the coding by myself and only copied the code that my professor 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "classList.h"
-#include "utils.h"
 
 int main() 
 {
@@ -19,7 +18,6 @@ int main()
 	char subjectName[9+1];
 	printf("Enter subject Name: ");
 	scanf("%s",subjectName);
-	flushKey();
     printf("Enter the number of students (max 50): ");
 	scanf("%d", &num);
 	printf("Enter %d student numbers and student marks...\n",num);

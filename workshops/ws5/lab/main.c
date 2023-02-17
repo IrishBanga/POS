@@ -26,9 +26,9 @@ int main()
 	for (i = 0; i < num; i++)
 	{
 		printf("%d:\n",i+1);
-		printf("Student Number:");
+		printf("Student Number: ");
 		scanf("%d", &stno[i]);
-		printf("Mark:");
+		printf("Mark: ");
 		scanf("%d", &mark[i]);
 	}
 	printReport(subjectName, stno, mark, num);

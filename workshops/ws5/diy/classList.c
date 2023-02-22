@@ -59,7 +59,7 @@ void subjectMarksReport(void)
     scanf("%s", subjectCode);
     printf("Enter Number of students (max 50): ");
     scanf("%d", &noOfStudents);
-    printf("Please enter %d student marks...\n", noOfStudents);
+    printf("Please enter %d student marks:\n", noOfStudents);
     int studentNumbers[50];
     int marks[50];
     for (j = 0; j < noOfStudents; j++)

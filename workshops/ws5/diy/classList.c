@@ -57,9 +57,9 @@ void subjectMarksReport(void)
     char subjectCode[9 + 1];
     printf("Enter subject Name: ");
     scanf("%s", subjectCode);
-    printf("Enter the number of students (max 50): ");
+    printf("Enter Number of students (max 50): ");
     scanf("%d", &noOfStudents);
-    printf("Enter %d student numbers and student marks...\n", noOfStudents);
+    printf("Please enter %d student marks...\n", noOfStudents);
     int studentNumbers[50];
     int marks[50];
     for (j = 0; j < noOfStudents; j++)

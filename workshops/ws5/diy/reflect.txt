@@ -1,0 +1,26 @@
+Name: Irish Banga
+Email: ibanga1@myseneca.ca
+Student ID: 112435227
+Completion Date: 2023-02-22
+
+REFLECTION
+
+This week’s lab introduced arrays.
+This allows for multiple inputs to be stored in a single entity (i.e. array) instead of creating multiple variables.
+It is declared as follows: type array[size];
+All the elements are referred to by an index value. The index value begins with the number 0 and goes up to size-1.
+
+We used it to store integers and characters. The character array was used to store a single string input from the console.
+The difference between the two was that we had to declare an array with an extra index than the total expected size of the string to be stored.
+
+The extra index's significance is storing a null value, which identifies the end of the meaningful characters.
+Also, to display the character string via printf() statements we used a new specifier: %s .
+
+We used parallel arrays to store student IDs and their marks so that they were stored in the same index values of different arrays.
+
+The DIY part was to improve the LAB code.
+
+I made changes to the getIntMM() function in my utils.c file and created a new function that met the requirements in the instructions.
+I used the main.c provided by the professor which included yes() function (also defined in utils.c) to check if the user would like to generate the report again.
+   
+

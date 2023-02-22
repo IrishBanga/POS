@@ -3,7 +3,7 @@ Name: Irish Banga
 Email: ibanga1@myseneca.ca
 Student ID: 112435227
 Completion Date: 2023-02-08
-Last Modified : 2023-02-10
+Last Modified : 2023-02-22
 
 I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 */
@@ -149,4 +149,24 @@ char getSingleChar(void)
     char ch = getchar();
     flushKey();
     return ch;
+}
+
+int getMMInt(int min, int max, const char valueName[])
+{
+    int value;
+    int done = 0;
+    value = getInt();
+    while (!done)
+    {
+        if (value >= min && value <= max)
+        {
+            done = 1;
+        }
+        else
+        {
+            printf("[%d<=%s<=%d], try again: ", min,valueName, max);
+            value = getInt();
+        }
+    }
+    return value;
 }

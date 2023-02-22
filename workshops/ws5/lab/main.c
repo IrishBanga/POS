@@ -10,6 +10,7 @@ I have done all the coding by myself and only copied the code that my professor 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "classList.h"
+#include "utils.h"
 
 int main() 
 {

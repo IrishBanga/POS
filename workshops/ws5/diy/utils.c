@@ -3,7 +3,7 @@ Name: Irish Banga
 Email: ibanga1@myseneca.ca
 Student ID: 112435227
 Completion Date: 2023-02-08
-Last Modified : 2023-02-10
+Last Modified : 2023-02-22
 
 I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 */
@@ -17,14 +17,14 @@ int getInt()
     int value = 0;
     int done = 0;
     char check = 0;
-    while (!done) 
+    while (!done)
     {
         if (scanf("%d%c", &value, &check) == 2 && check == '\n')
         {
             done = 1;
         }
         else
-        { 
+        {
             flushKey();
             if (value == 0)
             {
@@ -54,7 +54,7 @@ int getIntMM(int min, int max)
         }
         else
         {
-            printf("[%d<=Number<=%d], try again: ",min,max);
+            printf("[%d<=Number<=%d], try again: ", min, max);
             value = getInt();
         }
     }
@@ -66,14 +66,14 @@ double getDouble(void)
     double dvalue = 0.0;
     int done = 0;
     char check = 0;
-    while (!done) 
+    while (!done)
     {
         if (scanf("%lf%c", &dvalue, &check) == 2 && check == '\n')
         {
             done = 1;
         }
         else
-        { 
+        {
             flushKey();
             if (dvalue == 0.0)
             {
@@ -102,7 +102,7 @@ double getDoubleMM(double min, double max)
         }
         else
         {
-            printf("[%.3lf<=Number<=%.3lf], try again: ",min,max);
+            printf("[%.3lf<=Number<=%.3lf], try again: ", min, max);
             dvalue = getDouble();
         }
     }
@@ -149,4 +149,24 @@ char getSingleChar(void)
     char ch = getchar();
     flushKey();
     return ch;
+}
+
+int getMMInt(int min, int max, const char valueName[])
+{
+    int value;
+    int done = 0;
+    value = getInt();
+    while (!done)
+    {
+        if (value >= min && value <= max)
+        {
+            done = 1;
+        }
+        else
+        {
+            printf("[%d<=%s<=%d], try again: ", min, valueName, max);
+            value = getInt();
+        }
+    }
+    return value;
 }

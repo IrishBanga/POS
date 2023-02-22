@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e3f305fb-0b31-4604-9b3d-a3831044c0f8}</ProjectGuid>
+    <ProjectGuid>{03ad0ae5-9b2e-4409-9d70-863175f6266a}</ProjectGuid>
     <RootNamespace>diy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,13 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\lab\classList.h" />
-    <ClInclude Include="..\lab\utils.h" />
+    <ClCompile Include="classList.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="utils.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\lab\classList.c" />
-    <ClCompile Include="..\lab\main.c" />
-    <ClCompile Include="..\lab\utils.c" />
+    <ClInclude Include="classList.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

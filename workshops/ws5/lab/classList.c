@@ -20,7 +20,7 @@ void printReport(const char subjectCode[], const int studentNumbers[],
     avg = 0;
     printf("\nSUBJECT MARKS REPORT!\n");
     printf("  +---------------+\n");
-    printf("  | %-14s|\n",subjectCode);
+    printf("  | %-14s|\n", subjectCode);
     printf("  +--------+------+\n");
     printf("  | Std No | mark |\n");
     printf("  +--------+------+\n");
@@ -41,8 +41,8 @@ void printReport(const char subjectCode[], const int studentNumbers[],
         printf("  | %06d |%5d |\n", studentNumbers[i], marks[i]);
     }
     printf("  +--------+------+\n");
-    printf("  |%-8s|%5d |\n","Average",avg/noOfStudents);
-    printf("  |%-8s|%5d |\n","Highest",hm);
-    printf("  |%-8s|%5d |\n","Lowest",lm);
+    printf("  |%-8s|%5d |\n", "Average", avg / noOfStudents);
+    printf("  |%-8s|%5d |\n", "Highest", hm);
+    printf("  |%-8s|%5d |\n", "Lowest", lm);
     printf("  +--------+------+\n");
 }

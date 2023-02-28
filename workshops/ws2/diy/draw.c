@@ -4,10 +4,11 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 Competion Date: 2023-02-01
 
-I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+I have done all the coding by myself and only copied the code 
+that my professor provided to complete my workshops and assignments.
 */
 
-#define _CRT_SECURE_NO_WARNINGS 
+//#define _CRT_SECURE_NO_WARNINGS  no need since there is no scanf or string header file functions
 #include <stdio.h>
 
 void line(char start, char middle, char last, int length);

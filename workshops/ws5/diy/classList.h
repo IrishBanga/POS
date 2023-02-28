@@ -9,6 +9,6 @@ I have done all the coding by myself and only copied the code that my professor 
 */
 
 void printReport(const char subjectCode[], const int studentNumbers[],
-    const int marks[], int noOfStudents);
+                                  const int marks[], int noOfStudents);
 void subjectMarksReport(void);
 

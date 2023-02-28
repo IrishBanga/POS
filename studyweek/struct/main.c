@@ -52,28 +52,33 @@ struct Subject getSubject()
 {
 	int i;
 	struct Subject get;
-	printf("Subject Name:");
+	printf("Please enter subject details.\n");
+	printf("Name    :");
 	scanf("%[^\n]", &get.name);
-	printf("Subject Prefix:");
+	printf("Prefix  :");
 	scanf("%s", &get.pre);
-	printf("Subject Code:");
+	printf("Code    :");
 	scanf("%d", &get.code);
-	printf("Subject Section:");
+	printf("Section :");
 	scanf("%s", &get.section);
 	printf("Number Of Students:");
 	scanf("%d", &get.numberOfStudents);
 	flushKey();
+	line('-', 35);
+
 	for(i=0;i<get.numberOfStudents;i++)
 	{
-		printf("Student Name(first):");
+		printf("Student Number:%d\n", i + 1);
+		printf("Name(first):");
 		scanf("%s", &get.student[i].name.first);
-		printf("Student Name(last):");
+		printf("Name(last) :");
 		scanf("%s", &get.student[i].name.last);
-		printf("Student ID:");
+		printf("ID         :");
 		scanf("%ld", &get.student[i].stno);
-		printf("Student E-mail:");
+		printf("E-mail     :");
 		scanf("%s", &get.student[i].email);
 		flushKey();
+		line('-', 35);
 	}
 	return get;
 }
@@ -90,18 +95,21 @@ int main()
 
 void printSubject(struct Subject S)
 {
-	printf("%s\n", S.name);
-	printf("%s\n", S.pre);
-	printf("%d\n", S.code);
-	printf("%s\n", S.section);
-	printf("%d\n", S.numberOfStudents);
+	printf("Subject Details!\n");
+	printf("Name    :%s\n", S.name);
+	printf("Prefix  :%s\n", S.pre);
+	printf("Code    :%d\n", S.code);
+	printf("Section :%s\n", S.section);
+	printf("Number Of Students:%d\n", S.numberOfStudents);
+	line('-', 35);
 	int i;
 	for (i = 0; i < S.numberOfStudents; i++)
 	{
 		printf("Student Number:%d\n",i+1);
-		printf("Student Name:%s %s\n", S.student[i].name.first, S.student[i].name.last);
-		printf("Student ID:%ld\n", S.student[i].stno);
-		printf("Student E-mail:%s\n", S.student[i].email);
+		printf("Name  :%s %s\n", S.student[i].name.first, S.student[i].name.last);
+		printf("ID    :%ld\n", S.student[i].stno);
+		printf("E-mail:%s\n", S.student[i].email);
+		line('-', 35);
 	}
 }
 

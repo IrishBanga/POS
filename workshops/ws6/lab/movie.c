@@ -25,7 +25,7 @@ int loadMovie(struct Movie* mptr, FILE* fptr)
 void printInWidth(const char str[], int width)
 {
 	putchar('|');
-	int i=0;
+	//int i=0;
 	////int check = 0;
 	////check=printf("%-*.*s",width,width, str);
 	/*for (i = 0; i < width-check; i++)
@@ -44,7 +44,7 @@ void list(const struct Movie* mptr, int row)
 	printInWidth(mptr->title, 20);
 	printf(" %d ", mptr->year);
 	printf("| %5s |",mptr->rating);
-	printf(" %d:%0.2d ", mptr->duration/60, mptr->duration%60);
+	printf(" %d:%.2d ", mptr->duration/60, mptr->duration%60);
 	printInWidth(mptr->genre, 25);
 	printf(" %.1f |", mptr->crating);
 	putchar('\n');
@@ -55,7 +55,7 @@ void display(const struct Movie* m)
 	printf("Title: %s\n", m->title);
 	printf("Year: %d\n", m->year);
 	printf("Rating: %s\n", m->rating);
-	printf("Duration: %d:%0.2d ", m->duration / 60, m->duration % 60);
+	printf("Duration: %d:%.2d ", m->duration / 60, m->duration % 60);
 	printf("Genres: %s\n", m->genre);
 	printf("Consumer Rating: %.1f\n", m->crating);
 }

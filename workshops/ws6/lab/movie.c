@@ -24,7 +24,7 @@ int loadMovie(struct Movie* mptr, FILE* fptr)
 
 void printInWidth(const char str[], int width)
 {
-	putchar('| ');
+	putchar('|');
 	//int i=0;
 	////int check = 0;
 	////check=printf("%-*.*s",width,width, str);
@@ -32,8 +32,8 @@ void printInWidth(const char str[], int width)
 	{
 		putchar(' ');
 	}*/
-	printf("%-*.*s", width, width, str);
-	putchar(' |');
+	printf(" %-*.*s ", width, width, str);
+	putchar('|');
 	
 }
 

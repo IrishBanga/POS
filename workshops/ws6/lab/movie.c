@@ -43,7 +43,7 @@ void list(const struct Movie* mptr, int row)
 	printf("|%4d ",row);
 	printInWidth(mptr->title, 20);
 	printf(" %d ", mptr->year);
-	printf("| %5s |",mptr->rating);
+	printf("|%5s |",mptr->rating);
 	printf(" %d:%.2d ", mptr->duration/60, mptr->duration%60);
 	printInWidth(mptr->genre, 25);
 	printf(" %.1f |", mptr->crating);

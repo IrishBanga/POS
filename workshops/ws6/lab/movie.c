@@ -14,32 +14,16 @@ I have done all the coding by myself and only copied the code that my professor 
 
 int loadMovie(struct Movie* mptr, FILE* fptr)
 {
-	int success=0;
-	if (fscanf(fptr, "%[^\t]\t%d\t%[^\t]\t%d\t%[^\t]\t%f\n", mptr->title, &mptr->year, mptr->rating, &mptr->duration, mptr->genre, &mptr->crating) == 6)
-	{
-		success=1;
-	}
-	return success;
+	return (fscanf(fptr, "%[^\t]\t%d\t%[^\t]\t%d\t%[^\t]\t%f\n", mptr->title, &mptr->year, mptr->rating, &mptr->duration, mptr->genre, &mptr->crating) == 6);
 }
 
 void printInWidth(const char str[], int width)
 {
-	putchar('|');
-	//int i=0;
-	////int check = 0;
-	////check=printf("%-*.*s",width,width, str);
-	/*for (i = 0; i < width-check; i++)
-	{
-		putchar(' ');
-	}*/
-	printf(" %-*.*s ", width, width, str);
-	putchar('|');
-	
+	printf("| %-*.*s |", width, width, str);
 }
 
 void list(const struct Movie* mptr, int row)
 {
-	//printf("%s\t%d\t%s\t%d\t%s\t%.1f\n", mptr->title, mptr->year, mptr->rating, mptr->duration, mptr->genre, mptr->crating);
 	printf("|%4d ",row);
 	printInWidth(mptr->title, 20);
 	printf(" %d ", mptr->year);

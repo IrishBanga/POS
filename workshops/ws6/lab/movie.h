@@ -10,6 +10,8 @@ I have done all the coding by myself and only copied the code that my professor 
 #ifndef SDDS_MOVIES_H
 #define SDDS_MOVIES_H
 
+#include <stdio.h>
+
 struct Movie
 {
 	char title[61];
@@ -22,8 +24,6 @@ struct Movie
 
 int loadMovie(struct Movie* mptr, FILE* fptr);
 void printInWidth(const char str[], int width);
-
-
 void list(const struct Movie* mptr, int row);
 void display(const struct Movie* m);
 const char* getMovieTitle(const struct Movie* mptr);

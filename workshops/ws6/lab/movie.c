@@ -9,7 +9,7 @@ I have done all the coding by myself and only copied the code that my professor 
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "movie.h"
+#include "Movie.h"
 #include "utils.h"
 
 int loadMovie(struct Movie* mptr, FILE* fptr)

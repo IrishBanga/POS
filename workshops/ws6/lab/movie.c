@@ -26,12 +26,13 @@ void printInWidth(const char str[], int width)
 {
 	putchar('|');
 	int i=0;
-	int check = 0;
-	check=printf("%-*.*s",width,width, str);
+	////int check = 0;
+	////check=printf("%-*.*s",width,width, str);
 	/*for (i = 0; i < width-check; i++)
 	{
 		putchar(' ');
 	}*/
+	printf("%-*.*s", width, width, str);
 	putchar('|');
 	
 }

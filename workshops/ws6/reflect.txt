@@ -1,0 +1,25 @@
+Name: Irish Banga
+Email: ibanga1@myseneca.ca
+Student ID: 112435227
+Completion Date: 2023-03-28
+
+REFLECTION
+This workshop delved into the concept of structures, pointers, and files. 
+We also used safeguards to eliminate the chances of errors arising from including a header file within a header file.
+  
+The movie database was already provided in the movies.dat file. 
+The main program was also provided and had a function related to the string library. 
+It made my task easier as I didn’t have to code a function to find movie information based on a partial string match. 
+Similar functions were covered and coded in the previous lectures, so I had to refer to the notes to understand how this worked.
+
+As the workshop was built on multiple concepts, I faced problems with the syntax 
+while getting values from the files and scanning them into different variables of the struct.
+
+I made little progress in coding and meeting the requirements of the printInWidth() function as 
+I was unable to truncate the string to a defined width. Instead, I referred to the ‘CHARACTER STRINGS’ section
+of the Refinements topic (https://intro2c.sdds.ca/F-Refinements/character-strings) and was able to achieve similar results with a printf() statement only.
+
+Through the discussion, during the lab session, I was also able to improve my loadMovie() function.
+Instead of having a separate variable to determine a successful read and then returning it, I put the condition directly with the return statement.
+
+

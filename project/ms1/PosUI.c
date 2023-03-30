@@ -56,7 +56,7 @@ void runPos(const char filename[])
 			printf(">>>> Remove Item...\n");
 			break;
 		case 4:
-			printf(">>>> Stock items...\n");
+			printf(">>>> Stock Items...\n");
 			break;
 		case 5:
 			printf(">>>> Point Of Sale...\n");

@@ -66,7 +66,7 @@ int getIntMM(int min, int max)
         }
         else
         {
-            printf("[%d<=Number<=%d], try again: ", min, max);
+            printf("[%d<=Number<=%d], retry: ", min, max);
             value = getInt();
         }
     }

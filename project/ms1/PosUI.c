@@ -50,10 +50,10 @@ void runPos(const char filename[])
 			printf(">>>> Inventory...\n");
 			break;
 		case 2:
-			printf(">>>> Adding item...\n");
+			printf(">>>> Adding Item...\n");
 			break;
 		case 3:
-			printf(">>>> Remove item...\n");
+			printf(">>>> Remove Item...\n");
 			break;
 		case 4:
 			printf(">>>> Stock items...\n");

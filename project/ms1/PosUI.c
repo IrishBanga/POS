@@ -25,12 +25,12 @@ that my professor provided to complete my project milestones.
 int menu(void)
 {
 	printf("The Sene-Store\n"
-		"1 - Inventory\n"
-		"2 - Add item\n"
-		"3 - Remove item\n"
-		"4 - Stock item\n"
-		"5 - POS\n"
-		"0 - exit program\n"
+		"1- Inventory\n"
+		"2- Add item\n"
+		"3- Remove item\n"
+		"4- Stock item\n"
+		"5- POS\n"
+		"0- exit program\n"
 	    "> ");
 	return getMMInt(0, 5, "Selection");
 }

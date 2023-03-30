@@ -36,7 +36,8 @@ int menu(void)
 
 void runPos(const char filename[])
 {
-	int choice, done = 0;
+	int choice;
+	int done = 0;
 	printf(">>>> Loading Items...\n");
 	while (!done)
 	{

@@ -4,3 +4,20 @@ Student ID: 112435227
 
 Final Project Milestone 1
 Filename: reflect.txt
+
+REFLECTION
+
+Milestone 1 was absolutely simple and deals with displaying a relevant message for the task a user intends to perform with the POS system.
+
+I easily coded my menu function but faced a problem with re-iterating the menu until the user chose to exit the program. 
+
+At first, I used a while loop with menu() function as the condition as well as the sequence to be executed within the loop.
+This seemed to work fine until the user decided to quit the program.
+The program didn’t quit but instead prompted the user for additional input and quit regardless of the user selection. 
+
+I solved the problem by referring to the class notes. I changed my code to have a separate variable as the while loop condition 
+and moved my switch statement to runPos() function instead of the menu() function itself. 
+
+Initially, I also made the mistake of typing out every single display message, overlooking the start() function 
+which was already provided in the PosApp.c file. I later modified the menu() and the runPos() functions accordingly.
+

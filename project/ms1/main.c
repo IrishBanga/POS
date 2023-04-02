@@ -8,7 +8,7 @@ Final Project Milestone 1
 Module: main
 Filename: main.c
 Version 1.0
-Author: Irish Banga
+Author: Fardad Solimanloo
 Revision History
 -----------------------------------------------------------
 Date        Reason

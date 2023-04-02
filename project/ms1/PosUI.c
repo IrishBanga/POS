@@ -20,6 +20,7 @@ that my professor provided to complete my project milestones.
 
 */
 #include "utils.h"
+#include "PosApp.h"
 #include <stdio.h>
 
 int menu(void)
@@ -39,7 +40,7 @@ void runPos(const char filename[])
 {
 	int choice;
 	int done = 0;
-	printf(">>>> Loading Items...\n");
+	loadItems("posdata.csv");
 	while (!done)
 	{
 		
@@ -47,25 +48,24 @@ void runPos(const char filename[])
 		switch (choice)
 		{
 		case 1:
-			printf(">>>> Inventory...\n");
+			inventory();
 			break;
 		case 2:
-			printf(">>>> Adding Item...\n");
+			addItem();
 			break;
 		case 3:
-			printf(">>>> Remove Item...\n");
+			removeItem();
 			break;
 		case 4:
-			printf(">>>> Stock Items...\n");
+			stockItem();
 			break;
 		case 5:
-			printf(">>>> Point Of Sale...\n");
+			POS();
 			break;
 		default:
 			done = 1;
-			//printf("Goodbye!\n");
 		}
 	}
-	printf(">>>> Saving Items...\n");
+	saveItems("posdata.csv");
 	printf("Goodbye!\n");
 }

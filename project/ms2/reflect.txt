@@ -1,0 +1,25 @@
+Name: Irish Banga
+Email: ibanga1@myseneca.ca
+Student ID: 112435227
+
+Final Project Milestone 2
+Filename: reflect.txt
+
+REFLECTION
+In this milestone, we added additional features to already defined functions during milestone 1. 
+This milestone was focused primarily on reading item data from a file and updating it into a structure array.
+
+We also added new functions to calculate the valuation of items and to display the formatted data. 
+
+The loadItems() function had a file passed to it as an argument. Because the instructions specified to 
+include a check for successful file opening, I tried to open the file. I had difficulty getting the syntax right 
+and formulating the check condition. After referring to class notes and hit and trial I was able to get it working.  
+
+The listItems() function was easy to code as it was based on the last workshop. I used strncpy() as the instructions stated 
+copying exactly 18 characters from the item name into iName[]. But it posed a problem while displaying the contents. 
+The program aborted after executing loadItems() and displayed an error. Also, I faced another error where a few unrecognized characters 
+were printed along with the contents of iName[]. To get rid of the issues, I declared the array and initialized it as iName[18+1]={‘\0’}; 
+as opposed to replacing an index after using strncpy().
+
+
+

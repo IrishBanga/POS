@@ -24,7 +24,7 @@
     <ClCompile Include="PosUI.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main31.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

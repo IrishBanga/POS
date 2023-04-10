@@ -4,10 +4,10 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 31
+Final Project Milestone 32
 Module: PosApp
 Filename: PosApp.c
-Version 2.0
+Version 3.0
 Author: Irish Banga
 Revision History
 -----------------------------------------------------------------------
@@ -16,6 +16,7 @@ Date        Reason
 2023/04/07	Added cost(), listItems() and modified loadItems(), inventory()
             (descriptive comments alongwith functions)
 2023/04/09	modified saveItems()
+2023/04/09  added billDisplay() 
 -----------------------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -135,4 +136,15 @@ void listItems(void)
 		printf("%4d | %6s | %-18s |%6.2lf | %c | %3d |%8.2lf |\n",i+1,items[i].sku,iName,items[i].price,items[i].taxed ? 'T' : ' ', items[i].quantity, (cost(&items[i]) * items[i].quantity));
 	}
 	printf("-----^--------^--------------------^-------^---^-----^---------^\n");
+}
+
+/*
+v32 billDisplay()- new function to generate billing receipt and return cost of item
+*/
+double billDisplay(const struct Item* item)
+{
+	char product[15] = { '\0' };
+	strncpy(product, item->name, 14);
+	printf("| %-14s|%10.2lf | %s |\n",product,cost(item), item->taxed ? "Yes" : "   ");
+	return cost(item);
 }

@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 33
+Final Project Milestone 34
 Module: PosApp
 Filename: PosApp.c
 Version 3.0
@@ -18,6 +18,7 @@ Date        Reason
 2023/04/09	modified saveItems() -v31
 2023/04/09  added billDisplay()  -v32
 2023/04/09  added display() -v33
+2023/04/09  added search() -v34
 -----------------------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -30,6 +31,7 @@ that my professor provided to complete my project milestones.
 #include "POS.h"
 #include "PosApp.h"
 #include <string.h>
+#include "utils.h"
 
 void start(const char* action) {
 	printf(">>>> %s...\n", action);
@@ -169,4 +171,34 @@ void display(const struct Item* item)
 	}
 	printf("%-13s%d\n", "Stock Qty:", item->quantity);
 	printf("=============^\n");
+}
+
+/*
+v34 search()- new function
+*/
+int search(void)
+{
+	int i;
+	char sku[MAX_SKU_LEN] = {'\0'};
+	int index;
+	printf("Sku: ");
+	scanf("%[^\n]",sku);
+	flushKey();
+	for (i = 0; i < noOfItems; i++)
+	{
+		if (strstr(items[i].sku, sku) == NULL)
+		{
+			index = -1;
+		}
+		else if (sku[0] == '\0')
+		{
+			index = -2;
+		}
+		else
+		{
+			index = i;
+			i = noOfItems;
+		}
+	}
+	return index;
 }

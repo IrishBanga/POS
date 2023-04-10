@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 32
+Final Project Milestone 33
 Module: PosApp
 Filename: PosApp.c
 Version 3.0
@@ -15,8 +15,9 @@ Date        Reason
 2023/04/02  Preliminary release
 2023/04/07	Added cost(), listItems() and modified loadItems(), inventory()
             (descriptive comments alongwith functions)
-2023/04/09	modified saveItems()
-2023/04/09  added billDisplay() 
+2023/04/09	modified saveItems() -v31
+2023/04/09  added billDisplay()  -v32
+2023/04/09  added display() -v33
 -----------------------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -147,4 +148,25 @@ double billDisplay(const struct Item* item)
 	strncpy(product, item->name, 14);
 	printf("| %-14s|%10.2lf | %s |\n",product,cost(item), item->taxed ? "Yes" : "   ");
 	return cost(item);
+}
+
+/*
+v33 display()- new function to print item details in a detailed format
+*/
+void display(const struct Item* item)
+{
+	printf("=============v\n");
+	printf("%-13s%s\n","Name:",item->name);
+	printf("%-13s%s\n", "Sku:", item->sku);
+	printf("%-13s%.2lf\n", "Price:", item->price);
+	if (item->taxed)
+	{
+		printf("%-13s%.2lf\n", "Price + tax:",cost(item));
+	}
+	else
+	{
+		printf("%-13s%s\n", "Price + tax:","N/A");
+	}
+	printf("%-13s%d\n", "Stock Qty:", item->quantity);
+	printf("=============^\n");
 }

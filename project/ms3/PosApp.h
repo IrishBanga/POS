@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 32
+Final Project Milestone 33
 Module: PosApp
 Filename: PosApp.h
 Version 3.0
@@ -14,7 +14,8 @@ Revision History
 Date        Reason
 2023/04/02  Preliminary release
 2023/04/07	Added a structure, function prototypes, etc.
-2023/04/09	added billDisplay()
+2023/04/09	added billDisplay() -v32
+2023/04/09  added display() -v33
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -52,5 +53,8 @@ int noOfItems;
 
 //v32 addition
 double billDisplay(const struct Item* item);
+
+//v33 addition
+void display(const struct Item* item);
 
 #endif // !SDDS_POSAPP_H

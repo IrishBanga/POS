@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 34
+Final Project Milestone 35
 Module: PosApp
 Filename: PosApp.h
 Version 3.0

@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 34
+Final Project Milestone 35
 Module: main
 Filename: main.c
 Version 1.0
@@ -128,20 +128,69 @@ that my professor provided to complete my project milestones.
 // for submission.
 //
 /////////////////////////////////////////////////////////////////
+//#include <stdio.h>
+//#include "PosApp.h"
+//int main() {
+//    int i;
+//    int foundIndex;
+//    loadItems("posdata.csv");
+//    for (i = 0; (foundIndex = search()) != -2; i++) {
+//        if (foundIndex >= 0) {
+//            printf("SKU found at index %d\n", foundIndex);
+//        }
+//        else {
+//            printf("SKU not found!\n");
+//        }
+//    }
+//    printf("Search was executed %d times...", i);
+//    return 0;
+//}
+
+// Final Project 
+// Student POS App M35 tester program
+// Version 1.0
+// Date	2023-04-01
+// Author	Fardad Soleimanloo
+// Description
+// This program test the student implementation of the Item class
+// for submission.
+//
+/////////////////////////////////////////////////////////////////
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "PosApp.h"
+#include "PosUI.h"
+void fileDump(const char* filename);
+void ressetData();
 int main() {
-    int i;
-    int foundIndex;
-    loadItems("posdata.csv");
-    for (i = 0; (foundIndex = search()) != -2; i++) {
-        if (foundIndex >= 0) {
-            printf("SKU found at index %d\n", foundIndex);
-        }
-        else {
-            printf("SKU not found!\n");
-        }
-    }
-    printf("Search was executed %d times...", i);
+    ressetData();
+    fileDump("posdata.csv");
+    runPos("posdata.csv");
+    fileDump("posdata.csv");
     return 0;
+}
+
+void ressetData() {
+    FILE* f_origin = fopen("posdataOrigin.csv", "r");
+    FILE* f_data = fopen("posdata.csv", "w");
+    char ch;
+    while (fscanf(f_origin, "%c", &ch) == 1) {
+        fprintf(f_data, "%c", ch);
+    }
+    fclose(f_origin);
+    fclose(f_data);
+}
+void fileDump(const char* filename) {
+    FILE* fptr = fopen(filename, "r");
+    if (fptr) {
+        char ch = 0;
+        printf("Contents of file >>%s<<:\n", filename);
+        while (fscanf(fptr, "%c", &ch) == 1) {
+            putchar(ch);
+        }
+        fclose(fptr);
+        printf("End of data in >>%s<<\n", filename);
+    }
+    else {
+        printf("file: >>%s<< not found!\n", filename);
+    }
 }

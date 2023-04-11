@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="posdata.csv" />
+    <None Include="posdataOrigin.csv" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="POS.h" />

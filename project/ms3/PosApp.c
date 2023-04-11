@@ -4,7 +4,7 @@ Email: ibanga1@myseneca.ca
 Student ID: 112435227
 
 Citation and Sources...
-Final Project Milestone 34
+Final Project Milestone 35
 Module: PosApp
 Filename: PosApp.c
 Version 3.0
@@ -19,6 +19,7 @@ Date        Reason
 2023/04/09  added billDisplay()  -v32
 2023/04/09  added display() -v33
 2023/04/09  added search() -v34
+2023/04/10  modified POS() -v35
 -----------------------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -110,8 +111,109 @@ void removeItem(void) {
 void stockItem(void) {
 	start("Stock Items");
 }
-void POS(void) {
+
+/*
+v35 POS()- added functionality to genrerate a proper billing reciept by sku input from user
+adding an item to transaction, updating quantity in the inventory and calculating the total bill 
+*/
+void POS(void) 
+{
+	//int find;
+	//int itemcnt = 0;
+	//char bill[MAX_BILL_ITEMS+1] = {'\0'};
+	//start("Point Of Sale");
+	//int i;
+	//for (i = 0; i < MAX_BILL_ITEMS;)
+	//{
+	//	find = search();
+	//	if (find>=0)
+	//	{
+	//		if (items[find].quantity > 0)
+	//		{
+	//			itemcnt++;
+	//			items[find].quantity = items[find].quantity - 1;
+	//			display(&items[find]);
+	//			bill[i] = find;
+	//			i++;
+	//		}
+	//		else
+	//		{
+	//			printf("Item sold out!\n");
+	//		}
+	//	}
+	//	else if(find==-1)
+	//	{
+	//		printf("SKU not found!\n");
+	//	}
+	//	else if(find==-2)
+	//	{
+	//		i = MAX_BILL_ITEMS;
+	//	}
+
+	//}
+	//double total = 0;
+	//if (itemcnt)
+	//{
+	//	printf("+---------------v-----------v-----+\n");
+	//	printf("| Item          |     Price | Tax |\n");
+	//	printf("+---------------+-----------+-----+\n");
+	//	for (i = 0; i < itemcnt;)
+	//	{
+	//		billDisplay(&items[bill[i]]);
+	//		total =total+cost(&items[bill[i]]);
+	//		i++;
+	//	}
+	//	printf("+---------------^-----------^-----+\n");
+	//	printf("| total:              %.2lf |\n", total);
+	//	printf("^---------------------------^\n");
+	//}
+	int find;
+	int itemcnt = 0;
+	char bill[MAX_BILL_ITEMS + 1] = { '\0' };
 	start("Point Of Sale");
+	int i;
+	for (i = 0; i < MAX_BILL_ITEMS;)
+	{
+		find = search();
+		if (find >= 0)
+		{
+			if (items[find].quantity > 0)
+			{
+				itemcnt++;
+				items[find].quantity = items[find].quantity - 1;
+				display(&items[find]);
+				bill[i] = find;
+				i++;
+			}
+			else
+			{
+				printf("Item sold out!\n");
+			}
+		}
+		else if (find == -1)
+		{
+			printf("SKU not found!\n");
+		}
+		else if (find == -2)
+		{
+			i = MAX_BILL_ITEMS;
+		}
+	}
+	double total = 0;
+	if (itemcnt)
+	{
+		printf("+---------------v-----------v-----+\n");
+		printf("| Item          |     Price | Tax |\n");
+		printf("+---------------+-----------+-----+\n");
+		for (i = 0; i < itemcnt;i++)
+		{
+			billDisplay(&items[bill[i]]);
+			total = total + cost(&items[bill[i]]);
+		}
+		printf("+---------------^-----------^-----+\n");
+		printf("| total:              %.2lf |\n", total);
+		printf("^---------------------------^\n");
+	}
 }
 
 /*

@@ -120,7 +120,7 @@ void POS(void)
 {
 	int find;
 	int itemcnt = 0;
-	char bill[MAX_BILL_ITEMS+1] = {'\0'};
+	int bill[MAX_BILL_ITEMS+1] = {'\0'};
 	start("Point Of Sale");
 	int i;
 	for (i = 0; i < MAX_BILL_ITEMS;)

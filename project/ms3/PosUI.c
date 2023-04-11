@@ -21,6 +21,7 @@ that my professor provided to complete my project milestones.
 */
 #include "utils.h"
 #include "PosApp.h"
+#include "PosUI.h"
 #include <stdio.h>
 
 int menu(void)

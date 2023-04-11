@@ -118,64 +118,15 @@ adding an item to transaction, updating quantity in the inventory and calculatin
 */
 void POS(void) 
 {
-	//int find;
-	//int itemcnt = 0;
-	//char bill[MAX_BILL_ITEMS+1] = {'\0'};
-	//start("Point Of Sale");
-	//int i;
-	//for (i = 0; i < MAX_BILL_ITEMS;)
-	//{
-	//	find = search();
-	//	if (find>=0)
-	//	{
-	//		if (items[find].quantity > 0)
-	//		{
-	//			itemcnt++;
-	//			items[find].quantity = items[find].quantity - 1;
-	//			display(&items[find]);
-	//			bill[i] = find;
-	//			i++;
-	//		}
-	//		else
-	//		{
-	//			printf("Item sold out!\n");
-	//		}
-	//	}
-	//	else if(find==-1)
-	//	{
-	//		printf("SKU not found!\n");
-	//	}
-	//	else if(find==-2)
-	//	{
-	//		i = MAX_BILL_ITEMS;
-	//	}
-
-	//}
-	//double total = 0;
-	//if (itemcnt)
-	//{
-	//	printf("+---------------v-----------v-----+\n");
-	//	printf("| Item          |     Price | Tax |\n");
-	//	printf("+---------------+-----------+-----+\n");
-	//	for (i = 0; i < itemcnt;)
-	//	{
-	//		billDisplay(&items[bill[i]]);
-	//		total =total+cost(&items[bill[i]]);
-	//		i++;
-	//	}
-	//	printf("+---------------^-----------^-----+\n");
-	//	printf("| total:              %.2lf |\n", total);
-	//	printf("^---------------------------^\n");
-	//}
 	int find;
 	int itemcnt = 0;
-	char bill[MAX_BILL_ITEMS + 1] = { '\0' };
+	char bill[MAX_BILL_ITEMS+1] = {'\0'};
 	start("Point Of Sale");
 	int i;
 	for (i = 0; i < MAX_BILL_ITEMS;)
 	{
 		find = search();
-		if (find >= 0)
+		if (find>=0)
 		{
 			if (items[find].quantity > 0)
 			{
@@ -183,21 +134,22 @@ void POS(void)
 				items[find].quantity = items[find].quantity - 1;
 				display(&items[find]);
 				bill[i] = find;
-				i++;
+				
 			}
 			else
 			{
 				printf("Item sold out!\n");
 			}
 		}
-		else if (find == -1)
+		else if(find==-1)
 		{
 			printf("SKU not found!\n");
 		}
-		else if (find == -2)
+		else if(find==-2)
 		{
 			i = MAX_BILL_ITEMS;
 		}
+
 	}
 	double total = 0;
 	if (itemcnt)
@@ -205,10 +157,11 @@ void POS(void)
 		printf("+---------------v-----------v-----+\n");
 		printf("| Item          |     Price | Tax |\n");
 		printf("+---------------+-----------+-----+\n");
-		for (i = 0; i < itemcnt;i++)
+		for (i = 0; i < itemcnt;)
 		{
 			billDisplay(&items[bill[i]]);
-			total = total + cost(&items[bill[i]]);
+			total =total+cost(&items[bill[i]]);
+			i++;
 		}
 		printf("+---------------^-----------^-----+\n");
 		printf("| total:              %.2lf |\n", total);

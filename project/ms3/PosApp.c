@@ -134,7 +134,7 @@ void POS(void)
 				items[find].quantity = items[find].quantity - 1;
 				display(&items[find]);
 				bill[i] = find;
-				
+				i++;
 			}
 			else
 			{
@@ -229,7 +229,7 @@ void display(const struct Item* item)
 }
 
 /*
-v34 search()- new function
+v34 search()- new function to find an item from the inventory based on sku input
 */
 int search(void)
 {

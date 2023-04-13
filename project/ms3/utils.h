@@ -29,7 +29,6 @@ double getDouble(void);
 double getDoubleMM(double min, double max);
 void line(char fill, int length);
 int getMMInt(int min, int max, const char valueName[]);
-
 void flushKey();
 int yes(void);
 char getSingleChar(void);

@@ -30,5 +30,8 @@ that my professor provided to complete my project milestones.
 #define MAX_NO_ITEMS 500
 #define MAX_BILL_ITEMS 3
 
+#define NOT_FOUND (-1)
+#define END_POS   (-2)
+
 #endif // !SDDS_POS_H
 

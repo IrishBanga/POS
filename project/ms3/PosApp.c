@@ -118,22 +118,24 @@ adding an item to transaction, updating quantity in the inventory and calculatin
 */
 void POS(void) 
 {
-	int find;
+	int find = 0;
 	int itemcnt = 0;
 	int bill[MAX_BILL_ITEMS+1] = {'\0'};
+//	struct Item* iptr[MAX_BILL_ITEMS];
+
 	start("Point Of Sale");
 	int i;
-	for (i = 0; i < MAX_BILL_ITEMS;)
+	for (i = 0;find != -2 && i < MAX_BILL_ITEMS;)
 	{
 		find = search();
 		if (find>=0)
 		{
 			if (items[find].quantity > 0)
 			{
-				itemcnt++;
 				items[find].quantity = items[find].quantity - 1;
 				display(&items[find]);
 				bill[i] = find;
+	//			iptr[i] = &items[find];
 				i++;
 			}
 			else
@@ -145,12 +147,8 @@ void POS(void)
 		{
 			printf("SKU not found!\n");
 		}
-		else if(find==-2)
-		{
-			i = MAX_BILL_ITEMS;
-		}
-
 	}
+	itemcnt = i;
 	double total = 0;
 	if (itemcnt)
 	{
@@ -160,7 +158,9 @@ void POS(void)
 		for (i = 0; i < itemcnt;)
 		{
 			billDisplay(&items[bill[i]]);
-			total =total+cost(&items[bill[i]]);
+	//		billDisplay(iptr[i]);
+			total = total + cost(&items[bill[i]]); // perfect
+		//	total = total + cost(iptr[i]);
 			i++;
 		}
 		printf("+---------------^-----------^-----+\n");
@@ -229,30 +229,25 @@ void display(const struct Item* item)
 }
 
 /*
-v34 search()- new function to find an item from the inventory based on sku input
+v34 search()- new function
 */
 int search(void)
 {
 	int i;
 	char sku[MAX_SKU_LEN] = {'\0'};
-	int index;
+	int index = NOT_FOUND;
 	printf("Sku: ");
 	scanf("%[^\n]",sku);
 	flushKey();
-	for (i = 0; i < noOfItems; i++)
+	for (i = 0; index == NOT_FOUND && i < noOfItems; i++)
 	{
-		if (strstr(items[i].sku, sku) == NULL)
+		if (strcmp(items[i].sku, sku) == 0)
 		{
-			index = -1;
+			index = i;
 		}
 		else if (sku[0] == '\0')
 		{
-			index = -2;
-		}
-		else
-		{
-			index = i;
-			i = noOfItems;
+			index = END_POS;
 		}
 	}
 	return index;

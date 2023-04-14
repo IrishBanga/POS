@@ -33,9 +33,6 @@ void flushKey();
 int yes(void);
 char getSingleChar(void);
 
-
-
-
 #endif // !SDDS_UTILS_H
 
 

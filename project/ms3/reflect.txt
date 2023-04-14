@@ -6,5 +6,17 @@ Final Project Milestone 3
 Filename: reflect.txt
 
 REFLECTION
+Throughout milestones 31 to 35 we added new functions and modified the previously defined functions to generate a bill of items with our POS application.
+
+saveItems(), billDisplay() and display() functions were relatively simpler to code. I incorporated a conditional expression 
+in billDisplay() to print if the item was taxed or not, but I wasn’t able to apply a similar approach to the display() function.
+
+Coding the search() function took me some time as I wasn’t able to incorporate the quit condition (where the user presses ENTER key only) 
+into my logic on the first few tries and the program would prompt for a second value to be input. Eventually, I was able to 
+complete it and with feedback from my professor, I was able to make it more readable by including defined values NOT_FOUND and END_POS.  
+
+For milestone 35, which was concerned with the POS() function I applied a slightly different logic to keep track of the items in a transaction. 
+Instead of keeping a copy of the entire items or the pointer of item details, I recorded the indices of the items 
+that were successfully added to the bill in an integer array named bill[]. 
 
 

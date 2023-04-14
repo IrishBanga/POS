@@ -14,6 +14,7 @@ Revision History
 Date        Reason
 2023/04/02  Preliminary release
 2023/04/10	modified MAX_BILL_ITEMS from 10 to 3
+2023/04/14  added defined values NOT_FOUND and END_POS
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.

@@ -20,6 +20,7 @@ Date        Reason
 2023/04/09  added display() -v33
 2023/04/09  added search() -v34
 2023/04/10  modified POS() -v35
+2023/04/14  modified search() to include values NOT_FOUND and END_POS
 -----------------------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my project milestones.
@@ -121,11 +122,9 @@ void POS(void)
 	int find = 0;
 	int itemcnt = 0;
 	int bill[MAX_BILL_ITEMS+1] = {'\0'};
-//	struct Item* iptr[MAX_BILL_ITEMS];
-
 	start("Point Of Sale");
 	int i;
-	for (i = 0;find != -2 && i < MAX_BILL_ITEMS;)
+	for (i = 0;find != END_POS && i < MAX_BILL_ITEMS;)
 	{
 		find = search();
 		if (find>=0)
@@ -135,7 +134,6 @@ void POS(void)
 				items[find].quantity = items[find].quantity - 1;
 				display(&items[find]);
 				bill[i] = find;
-	//			iptr[i] = &items[find];
 				i++;
 			}
 			else
@@ -143,7 +141,7 @@ void POS(void)
 				printf("Item sold out!\n");
 			}
 		}
-		else if(find==-1)
+		else if(find==NOT_FOUND)
 		{
 			printf("SKU not found!\n");
 		}
@@ -158,9 +156,7 @@ void POS(void)
 		for (i = 0; i < itemcnt;)
 		{
 			billDisplay(&items[bill[i]]);
-	//		billDisplay(iptr[i]);
-			total = total + cost(&items[bill[i]]); // perfect
-		//	total = total + cost(iptr[i]);
+			total = total + cost(&items[bill[i]]);
 			i++;
 		}
 		printf("+---------------^-----------^-----+\n");
@@ -229,7 +225,7 @@ void display(const struct Item* item)
 }
 
 /*
-v34 search()- new function
+v34 search()- new function to search for an item based on sku input by user
 */
 int search(void)
 {

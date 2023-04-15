@@ -117,20 +117,11 @@ v4 selectItems()- new function to select an item from the inventory
 int selectItems(void)
 {
 	int choice;
-	char iName[18 + 1] = { '\0' };
 	printf("Select an item:\n");
-	printf("-----v--------v--------------------v-------v---v-----v---------v\n"
-	       " Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
-		   "-----|--------|--------------------|-------|---|-----|---------|\n");
-	int i;
-	for (i = 0; i < 9; i++)
-	{
-		strncpy(iName, items[i].name, 18);
-		printf("%4d | %6s | %-18s |%6.2lf | %c | %3d |%8.2lf |\n", i + 1, items[i].sku, iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, (cost(&items[i]) * items[i].quantity));
-	}
-	printf("-----^--------^--------------------^-------^---^-----^---------^\n");
+	printf("-----v--------v--------------------v-------v---v-----v---------v\n");
+	listItems();
 	printf("Select row: ");
-	choice = getMMInt(1,9,"Row Number");
+	choice = getMMInt(1,noOfItems,"Row Number");
 	return choice-1;
 }
 

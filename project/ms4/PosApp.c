@@ -118,7 +118,6 @@ int selectItems(void)
 {
 	int choice;
 	printf("Select an item:\n");
-	char iName[18 + 1] = { '\0' };
 	printf("-----v--------v--------------------v-------v---v-----v---------v\n");
 	listItems();
 	printf("Select row: ");

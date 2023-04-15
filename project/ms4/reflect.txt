@@ -7,3 +7,20 @@ Filename: reflect.txt
 
 REFLECTION
 
+The selectItems() was implemented using the previously developed listItems() function. 
+It simply displayed a few messages and prompted the user to choose an item based on the row 
+number. This value minus 1, was then returned by the function.  
+
+The stockItem() function, got the value returned by selectItems() and used the display() 
+function created in earlier versions of the program to display item details. The user is then 
+prompted to enter the quantity to add to the selected item. As the total quantity can never 
+exceed MAX_STOCK_NUMBER so I implemented getMMInt() by capping the maximum limit based on 
+the current quantity of an item.
+
+The instructions indicated that the items in inventory are assumed to be limited to 9, I changed 
+the MAX_NO_ITEMS to 9. My program worked fine but the execution sample had a different initial 
+quantity due to which I made changes to the data files as well. 
+
+My output was exactly similar to the execution sample provided but it failed the submitter test. 
+Eventually, by checking the correct_output file, I reverted all the changes made to data files and 
+MAX_NO_ITEMS  and it passed the feedback checks.

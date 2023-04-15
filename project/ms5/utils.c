@@ -145,7 +145,7 @@ int yes(void)
 {
     int res;
     char resp;
-    printf("(Y)es or (N)o: ");
+    printf("(Y)es/(N)o: ");
     resp = getSingleChar();
     if (resp == 'Y' || resp == 'y') {
         res = 1;

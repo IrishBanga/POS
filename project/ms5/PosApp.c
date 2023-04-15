@@ -115,8 +115,9 @@ void addItem(void)
 	{
 		printf("SKU: ");
 		scanf("%s", items[noOfItems].sku);
+		flushKey();
 		printf("Name: ");
-		scanf("%s", items[noOfItems].name);
+		scanf("%[^\n]", items[noOfItems].name);
 		flushKey();
 		printf("Price: ");
 		items[noOfItems].price = getDouble();

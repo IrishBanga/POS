@@ -120,7 +120,7 @@ void addItem(void)
 		flushKey();
 		printf("Price: ");
 		items[noOfItems].price = getDouble();
-		printf("Is the item Taxed? (Y)es/(N)o: ");
+		printf("Is the item Taxed? ");
 		items[noOfItems].taxed = yes();
 		printf("Quantity: ");
 		items[noOfItems].quantity = getMMInt(1, MAX_STOCK_NUMBER, "Quantity");

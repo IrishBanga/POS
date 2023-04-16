@@ -6,4 +6,16 @@ Final Project Milestone 5
 Filename: reflect.txt
 
 REFLECTION
+The final milestone of the project included adding and removing items from the inventory.
 
+Initially, in addItem() function I took the name SKU and name input with the ‘%s’ specifier which 
+caused only a partial read of the item name input. Then I implemented the name to be read with 
+the ‘%[^\n]’ specifier. This caused the program to skip input for the item name completely. 
+To solve the issue I included the flushkey() function after scanf() statements for SKU and Name. 
+yes() function was also included to read if the item was taxed or not.
+
+For removeItem() function, I used the previously developed selectItems() function. At first, I tried 
+to remove the item by setting the related index of the items array to NULL. It gave me errors after 
+which I realized my mistake. 
+
+At last, I used a loop to replace the items array’s data with that of the succeeding items.   
